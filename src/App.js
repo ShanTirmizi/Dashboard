@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { decrement, increment } from './redux/counter';
 import { useState, useEffect } from 'react';
 import Map from './components/Map';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // -------------
 
@@ -82,14 +83,22 @@ function App() {
   const { count } = useSelector(state => state.counter)
   const dispatch = useDispatch()
   return (
-    <div>
-      {/* <ResponsiveDrawer /> */}
-      <h1>The count is: {count}</h1>
-      <button onClick={() => dispatch(increment())}>plussss</button>
-      <button onClick={() => dispatch(decrement())}>minusss</button>
-      {/* <StickyHeadTable rows={vehicles} columns={columns}/> */}
-      <Map />
-    </div>
+    <Router>
+      <div>
+        {/* <ResponsiveDrawer /> */}
+        <h1>The count is: {count}</h1>
+        <button onClick={() => dispatch(increment())}>plussss</button>
+        <button onClick={() => dispatch(decrement())}>minusss</button>
+        <Switch>
+          <Route exact path='/'>
+            <StickyHeadTable rows={vehicles} columns={columns}/>
+          </Route>
+          <Route  path='/map'>
+            <Map />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
