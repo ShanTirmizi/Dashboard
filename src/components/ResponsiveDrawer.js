@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -67,12 +70,26 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Dashboard', 'Map'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
+        <Link to='/'>
+            <ListItem button>
+                <ListItemText primary='Dashboard' />
+            </ListItem>
+        </Link>
+        <Link to='/map'>
+            <ListItem button>
+                <ListItemText primary='Map' />
+            </ListItem>
+        </Link>
+
+
+
+        
       </List>
       <Divider />
       <List>
