@@ -85,7 +85,7 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <ResponsiveDrawer /> */}
+        <ResponsiveDrawer />
         <h1>The count is: {count}</h1>
         <button onClick={() => dispatch(increment())}>plussss</button>
         <button onClick={() => dispatch(decrement())}>minusss</button>
