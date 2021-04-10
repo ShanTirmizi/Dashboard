@@ -4,6 +4,7 @@ import StickyHeadTable from './components/Table';
 import { useSelector, useDispatch } from 'react-redux';
 import { decrement, increment } from './redux/counter';
 import { useState, useEffect } from 'react';
+import Map from './components/Map';
 
 // -------------
 
@@ -86,7 +87,8 @@ function App() {
       <h1>The count is: {count}</h1>
       <button onClick={() => dispatch(increment())}>plussss</button>
       <button onClick={() => dispatch(decrement())}>minusss</button>
-      <StickyHeadTable rows={vehicles} columns={columns}/>
+      {/* <StickyHeadTable rows={vehicles} columns={columns}/> */}
+      <Map />
     </div>
   );
 }
