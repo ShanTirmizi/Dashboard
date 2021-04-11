@@ -37,5 +37,5 @@ to generate the scaffolding for this app.
 
 1. Used '#03989E' as the primary color
 2. Implemented routing functionality
-3. Added maps using leaflet js
+3. Added map using leaflet js
 
