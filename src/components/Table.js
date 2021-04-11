@@ -35,10 +35,10 @@ import TableRow from '@material-ui/core/TableRow';
 //   },
 // ];
 
-function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
-}
+// function createData(name, code, population, size) {
+//   const density = population / size;
+//   return { name, code, population, size, density };
+// }
 
 // const rows = [
 //   createData('India', 'IN', 1324171354, 3287263),
@@ -61,9 +61,11 @@ function createData(name, code, population, size) {
 const useStyles = makeStyles({
   root: {
     width: '100%',
+    marginTop: '40px',
+    borderRadius: '10px',
   },
   container: {
-    maxHeight: 440,
+    // maxHeight: 440,
   },
 });
 
@@ -81,7 +83,6 @@ export default function StickyHeadTable({rows,columns}) {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
-
   return (
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import LaptopMacIcon from '@material-ui/icons/LaptopMac';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import MapIcon from '@material-ui/icons/Map';
 
 const SideMenu = () => {
     const [ modal, setModal ] = useState(false)
@@ -13,8 +15,18 @@ const SideMenu = () => {
                     <LaptopMacIcon style={{ fontSize: 30, marginLeft: 5 }} />
                     <p>Trac Mobility</p>
                 </div>
-            <Link className='sidenav-header-dash' to='/'>KPI Dashboard</Link>
-            <Link to='/map'>Map</Link>
+            <Link className='sidenav-header-dash' to='/'>
+                <div className='sidenav-header-dropdown'>
+                    <DashboardIcon /> 
+                    <p>KPI Dashboard</p>   
+                </div>
+            </Link>
+            <Link to='/map'>
+                <div className='sidenav-header-dropdown'>
+                    <MapIcon />
+                    <p>Map</p>
+                </div>
+            </Link>
             <div>
             <Link onClick={() => setModal(!modal)}>
                 <div className='sidenav-header-dropdown'>
