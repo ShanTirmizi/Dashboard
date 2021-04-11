@@ -4,7 +4,8 @@ import Navbar from './components/Navbar';
 
 import StickyHeadTable from './components/Table';
 import { useSelector, useDispatch } from 'react-redux';
-import { decrement, increment } from './redux/counter';
+import {getData} from './redux/data'
+// import { status } from './redux/data';
 import { useState, useEffect } from 'react';
 import Map from './components/Map';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -15,6 +16,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function App() {
   // -----------------------------------
   const [ vehicles, setVehicles ] =  useState([])
+  const [loading, setLoading ] = useState(true)
 
   const fetchData = async() => {
     try {
@@ -27,9 +29,9 @@ function App() {
     }
   } 
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+  // useEffect(() => {
+  //   fetchData()
+  // }, [])
 
   // function createData(name, code, population, size) {
   //   const density = population / size;
@@ -81,9 +83,38 @@ function App() {
 
 // console.log(rows)
 
+
   // -----------------------------------
-  const { count } = useSelector(state => state.counter)
-  const dispatch = useDispatch()
+
+
+    const { vehicleData, status } = useSelector(state => state.data)
+    const dispatch = useDispatch()
+ 
+  const content = () => {
+
+    try {
+      if(vehicleData != []) {
+        setVehicles(vehicleData)
+        setLoading(false)
+        console.log(vehicleData)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  useEffect(() => {
+    dispatch(getData())
+    // content()
+  }, [])
+
+
+  useEffect(() => {
+    if(status == 'success') {
+      content()
+      console.log(status)
+      setLoading(false)
+    }
+  }, [status])
   return (
     <Router>
         <SideMenu />
@@ -94,7 +125,12 @@ function App() {
         <button onClick={() => dispatch(decrement())}>minusss</button> */}
         <Switch>
           <Route exact path='/'>
-            <StickyHeadTable rows={vehicles} columns={columns}/>
+          {
+            !loading && (
+            <StickyHeadTable rows={vehicles[0].content} columns={columns}/>
+          )
+
+          }
           </Route>
           <Route  path='/map'>
             <Map />
