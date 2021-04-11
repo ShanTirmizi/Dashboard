@@ -11,3 +11,9 @@ By [Shan Tirmizi](mailto:tirmizishahnawaz@gmail.com)
 4. Start your server using `npm start`
 5. Navigate to app in [browser](http://localhost:3000)
 6. Enjoy!
+
+## Discussion
+
+I used the following technologies: React, Leaftlet, Material UI, Redux and CSS.
+I used [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)
+to generate the scaffolding for this app.
