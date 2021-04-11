@@ -4,9 +4,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 export const getData = createAsyncThunk(
   'data/getData',
   async () => {
-      const response = await fetch("http://console-api.tracmobility.com/test/vehicles")
-      const data = await response.json()
-      return data
+    const response = await fetch("http://console-api.tracmobility.com/test/vehicles")
+    const data = await response.json()
+    return data
   }
 )
 export const dataSlice = createSlice({
