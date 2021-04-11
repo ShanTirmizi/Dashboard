@@ -17,3 +17,15 @@ By [Shan Tirmizi](mailto:tirmizishahnawaz@gmail.com)
 I used the following technologies: React, Leaftlet, Material UI, Redux and CSS.
 I used [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)
 to generate the scaffolding for this app.
+
+## Requirements
+
+#### Please implement Vehicle List page
+#### Please use React
+#### Please integrate Redux
+
+1. Created the App using React
+2. Intergrated Redux successfully 
+3. Implemented Vehicle List page 
+4. Displayed the list using Material UI pagination 
+5. Added SideMenu with multiple features
