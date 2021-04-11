@@ -1,5 +1,7 @@
 import './App.css';
-import ResponsiveDrawer from './components/ResponsiveDrawer';
+import SideMenu from './components/SideMenu';
+import Navbar from './components/Navbar';
+
 import StickyHeadTable from './components/Table';
 import { useSelector, useDispatch } from 'react-redux';
 import { decrement, increment } from './redux/counter';
@@ -84,8 +86,9 @@ function App() {
   const dispatch = useDispatch()
   return (
     <Router>
-      <div>
-        <ResponsiveDrawer />
+        <SideMenu />
+        <Navbar />
+        <div className='main'>
         <h1>The count is: {count}</h1>
         <button onClick={() => dispatch(increment())}>plussss</button>
         <button onClick={() => dispatch(decrement())}>minusss</button>
@@ -97,7 +100,7 @@ function App() {
             <Map />
           </Route>
         </Switch>
-      </div>
+        </div>
     </Router>
   );
 }
