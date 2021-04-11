@@ -12,7 +12,7 @@ const SideMenu = () => {
     return (
         <div className="sidenav">
                 <div className="sidenav-header">
-                    <LaptopMacIcon style={{ fontSize: 30, marginLeft: 5 }} />
+                    <LaptopMacIcon style={{ fontSize: 30, marginLeft: 5}} />
                     <p>Trac Mobility</p>
                 </div>
             <Link className='sidenav-header-dash' to='/'>
@@ -28,23 +28,22 @@ const SideMenu = () => {
                 </div>
             </Link>
             <div>
-            <Link onClick={() => setModal(!modal)}>
-                <div className='sidenav-header-dropdown'>
-                    <p>Vehicle Information</p>
-                    <div>
-                        {modal ? <ArrowDropUpIcon  style={{ height: '100%' }} /> : <ArrowDropDownIcon style={{ height: '100%' }} />}
+                <Link onClick={() => setModal(!modal)}>
+                    <div className='sidenav-header-dropdown'>
+                        <p>Vehicle Information</p>
+                        <div>
+                            {modal ? <ArrowDropUpIcon  style={{ height: '100%' }} /> : <ArrowDropDownIcon style={{ height: '100%' }} />}
+                        </div>
                     </div>
-                </div>
-            </Link>
-            {
-                modal && (
-                <div className='sidenav-header-modal'>
-                    <Link to='/'>Dashboard</Link>
-                    <Link to='/map'>Map</Link>
-                </div>
-                )
-            }
-
+                </Link>
+                {
+                    modal && (
+                        <div className='sidenav-header-modal'>
+                            <Link to='/'>Dashboard</Link>
+                            <Link to='/map'>Map</Link>
+                        </div>
+                    )
+                }
             </div>
         </div>
     )

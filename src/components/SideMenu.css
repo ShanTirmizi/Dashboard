@@ -13,7 +13,7 @@
 .sidenav-header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .sidenav-header p {
@@ -21,10 +21,6 @@
   padding-left: 8px;
   font-size: 28px;
 }
-
-/* .sidenav-header-icon {
-  font-size: 500px;
-}   */
 
 .sidenav-header-dash {
   margin: 10px;

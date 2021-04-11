@@ -13,14 +13,10 @@ const Navbar = () => {
                 <SearchIcon className='topnav-search-icon' />
             </div>
             <div className='topnav-right'>
-                {/* <div> */}
                     <NotificationsIcon className='topnav-right-pad' />
                     <EmailIcon className='topnav-right-pad'/>
-                {/* </div> */}
-                {/* <div> */}
                     <p className='topnav-right-pad'>Jack</p> 
                     <img className='topnav-right-pad' src={Profile} />
-                {/* </div> */}
             </div>
         </div>
     )
