@@ -29,3 +29,13 @@ to generate the scaffolding for this app.
 3. Implemented Vehicle List page 
 4. Displayed the list using Material UI pagination 
 5. Added SideMenu with multiple features
+
+
+#### Please make sure that the primary colour should be ‘#03989E’
+#### Please implement route and other components are empty
+#### Please implement one interactive map (e.g. leaflet) to show the vehicle historical route with the mock data.
+
+1. Used '#03989E' as the primary color
+2. Implemented routing functionality
+3. Added maps using leaflet js
+
