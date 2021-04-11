@@ -14,7 +14,7 @@ By [Shan Tirmizi](mailto:tirmizishahnawaz@gmail.com)
 
 ## Discussion
 
-I used the following technologies: React, Leaftlet, Material UI, Redux and CSS.
+I used the following technologies: React, Leaftlet js, Material UI, Redux and CSS.
 I used [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html)
 to generate the scaffolding for this app.
 
