@@ -31,10 +31,10 @@ function App() {
     fetchData()
   }, [])
 
-  function createData(name, code, population, size) {
-    const density = population / size;
-    return { name, code, population, size, density };
-  }
+  // function createData(name, code, population, size) {
+  //   const density = population / size;
+  //   return { name, code, population, size, density };
+  // }
   const columns = [
     { id: 'uuid', label: 'VehicleID', minWidth: 170 },
     { id: 'qrCode', label: 'QRCode', minWidth: 100 },
@@ -89,9 +89,9 @@ function App() {
         <SideMenu />
         <Navbar />
         <div className='main'>
-        <h1>The count is: {count}</h1>
+        {/* <h1>The count is: {count}</h1>
         <button onClick={() => dispatch(increment())}>plussss</button>
-        <button onClick={() => dispatch(decrement())}>minusss</button>
+        <button onClick={() => dispatch(decrement())}>minusss</button> */}
         <Switch>
           <Route exact path='/'>
             <StickyHeadTable rows={vehicles} columns={columns}/>
