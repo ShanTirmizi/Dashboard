@@ -1,0 +1,70 @@
+.sidenav {
+  height: 100vh;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #03989E;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidenav-header p {
+  margin: auto;
+  padding-left: 8px;
+  font-size: 28px;
+}
+
+/* .sidenav-header-icon {
+  font-size: 500px;
+}   */
+
+.sidenav-header-dash {
+  margin: 10px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 19px;
+  color: #fff;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav-header-dropdown {
+  display: flex;
+}
+
+.sidenav-header-dropdown p {
+  margin: 0;
+}
+
+.sidenav-header-modal {
+  background-color: white;
+  color: #03989E;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.sidenav-header-modal a {
+  color: #03989E;
+}
+
+.main {
+  margin-left: 220px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}

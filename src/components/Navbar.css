@@ -1,0 +1,69 @@
+.topnav {
+    overflow: hidden;
+    background-color: #03989E;
+    margin-left: 220px; 
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    margin: auto 0 auto 20px;
+    font-size: 17px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .topnav-search {
+    display: flex;
+    align-items: center;
+  }
+
+  .topnav-search-icon {
+    background-color: white;
+    padding: 4px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .topnav p {
+    border-left: 3px solid #000;
+  }
+
+  .topnav-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .topnav-right img {
+    height: 35px;
+  }
+
+  .topnav-right-pad {
+    padding: 10px;
+  }
